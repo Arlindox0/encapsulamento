@@ -1,0 +1,80 @@
+"""Defina uma classe com pelo menos 1 atributo e com os
+getters/setters no modo pythônico
+• Solicite ao usuário digitar os valores para criação de um objeto da
+classe criada
+• Crie um objeto da classe criada usando os valores digitados pelo
+usuário
+• Exiba na tela os valores atributos do objeto criado
+• Altere os atributos do objeto
+• Exiba os valores atributos do objeto criado mais uma vez"""
+
+
+class Cadastro:
+    def __init__(self, nome, idade, cpf, rg, endereco, sexo):
+        self.__nome = nome
+        self.__idade = idade
+        self.__cpf = cpf
+        self.__rg = rg
+        self.__endereco = endereco
+        self.__sexo = sexo
+
+    @property
+    def nome(self):
+        return self.__nome
+
+    @nome.setter
+    def nome(self, nome):
+        self.__nome = nome
+
+    @property
+    def idade(self):
+        return self.__idade
+
+    @idade.setter
+    def idade(self, idade):
+        self.__idade = idade
+
+    @property
+    def cpf(self):
+        return self.__cpf
+
+    @cpf.setter
+    def cpf(self, cpf):
+        self.__cpf = cpf
+
+    @property
+    def rg(self):
+        return self.__rg
+
+    @rg.setter
+    def rg(self, rg):
+        self.__rg = rg
+
+    @property
+    def endereco(self):
+        return self.__endereco
+
+    @endereco.setter
+    def endereco(self, endereco):
+        self.__endereco = endereco
+
+    @property
+    def sexo(self):
+        return self.__sexo
+
+    @sexo.setter
+    def sexo(self, sexo):
+        self.__sexo = sexo
+
+
+C = Cadastro("Arlindo", 16, 121, 27, 219, "M")
+
+print(C.nome)
+# print(C.idade)
+# print(C.cpf)
+# print(C.rg)
+# print(C.endereco)
+# print(C.sexo)
+
+C.nome = "Filho"
+print(C.nome)
